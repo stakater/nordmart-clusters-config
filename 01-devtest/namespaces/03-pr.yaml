@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: nordmart-pr
+  annotations:
+    openshift.io/node-selector: node-role.kubernetes.io/infra=
+  labels:
+    team: nordmart

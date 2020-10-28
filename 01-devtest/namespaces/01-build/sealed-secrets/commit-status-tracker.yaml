@@ -1,0 +1,13 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: commit-status-tracker-git-secret
+  namespace: nordmart-build
+spec:
+  encryptedData:
+    token: REPLACE_IT
+  template:
+    metadata:
+      name: commit-status-tracker-git-secret
+      namespace: nordmart-build
+    type: Opaque

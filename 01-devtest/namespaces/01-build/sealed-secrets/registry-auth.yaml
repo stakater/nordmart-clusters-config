@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: registry-auth
+  namespace: nordmart-build
+spec:
+  encryptedData:
+    password: REPLACE_IT
+    username: REPLACE_IT
+  template:
+    metadata:
+      annotations:
+        tekton.dev/docker-0: docker.io
+      name: registry-auth
+      namespace: nordmart-build
+    type: kubernetes.io/basic-auth
