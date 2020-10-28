@@ -8,7 +8,7 @@ spec:
     namespace: nordmart-prod
     server: 'https://kubernetes.default.svc'
   source:
-    path: nordmart/prod
+    path: 04-prod/nordmart/prod
     repoURL: 'https://github.com/stakater/nordmart-apps-config.git'
     targetRevision: HEAD
   project: default
