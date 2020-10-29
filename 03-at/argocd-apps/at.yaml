@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nordmart-at
+  namespace: argocd
+spec:
+  destination:
+    namespace: nordmart-at
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: 03-at/nordmart/at
+    repoURL: 'https://github.com/stakater/nordmart-apps-config.git'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated:
+      automated:
+        prune: true
+        selfHeal: true
+      prune: true
+      selfHeal: true

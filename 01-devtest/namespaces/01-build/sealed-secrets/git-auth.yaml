@@ -1,0 +1,17 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  name: git-auth
+  namespace: nordmart-build
+spec:
+  encryptedData:
+    email: REPLACE_IT
+    password: REPLACE_IT
+    username: REPLACE_IT
+  template:
+    metadata:
+      annotations:
+        tekton.dev/git-0: https://github.com
+      name: git-auth
+      namespace: nordmart-build
+    type: kubernetes.io/basic-auth
